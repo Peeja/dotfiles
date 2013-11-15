@@ -2,7 +2,8 @@
   name = Peter Jaros
   email = peter.a.jaros@gmail.com
 [core]
-  attributesfile = /Users/peeja/.gitattributes
+  excludesfile = ~/.gitexcludes
+  attributesfile = ~/.gitattributes
 
 [color]
   ui = auto
