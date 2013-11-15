@@ -11,5 +11,8 @@
 /Pictures
 /Public
 
+/.antigen
 /.lesshst
 /.ssh
+/.zcompdump
+/.zsh_history
