@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Log output:
+#
+# * 51c333e    (12 days)    <Gary Bernhardt>   add vim-eunuch
+#
+# The time massaging regexes start with ^[^<]* because that ensures that they
+# only operate before the first "<". That "<" will be the beginning of the
+# author name, ensuring that we don't destroy anything in the commit message
+# that looks like time.
+#
+# The log format uses } characters between each field, and `column` is later
+# used to split on them. A } in the commit subject or any other field will
+# break this.
+
+HASH="%C(yellow)%h%Creset"
+RELATIVE_TIME="%Cgreen(%ar)%Creset"
+AUTHOR="%C(bold blue)<%an>%Creset"
+REFS="%C(red)%d%Creset"
+SUBJECT="%s"
+
+FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
+
+show_git_head() {
+    pretty_git_log -1
+    git show -p --pretty="tformat:"
+}
+
+pretty_git_log() {
+    git log --graph --pretty="tformat:${FORMAT}" "$@" |
+        # Replace (2 years ago) with (2 years)
+        sed -Ee 's/(^[^<]*) ago)/\1)/' |
+        # Replace (2 years, 5 months) with (2 years)
+        sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\1)/' |
+        # Line columns up based on } delimiter
+        column -s '}' -t |
+        # Page only if we need to
+        less -FXRS
+}
+
+new_git_branch_from_origin_master() {
+  git fetch origin
+  git checkout -b "$1" --no-track origin/master
+}
+
+start_work_on_gh_issue() {
+  issue_url_or_number=$1
+  issue_number=$(echo "$issue_url_or_number" | sed -Ee "s@^.*/issues/([[:digit:]]+)@\1@")
+  branch_name=$(ghi show "$issue_number" | head -1 | sed -E "s/^#[[:digit:]]+: //" | tr -d '\n' | tr A-Z a-z | tr -C a-z -)
+
+  new_git_branch_from_origin_master $branch_name
+  # git push origin HEAD -u
+  # hub pull-request -i $issue_number
+}

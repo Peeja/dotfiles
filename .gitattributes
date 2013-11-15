@@ -1,0 +1,4 @@
+# Treat these files as binary.
+*.ai -crlf -diff -merge
+*.graffle -crlf -diff -merge
+*.eps -crlf -diff -merge

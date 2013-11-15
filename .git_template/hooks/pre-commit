@@ -1,0 +1,44 @@
+#!/bin/sh
+
+main() {
+  # disallow_committing_to_master
+  disallow_committing_nocommits
+  exit 0
+}
+
+disallow_committing_to_master() {
+  if [[ $(git symbolic-ref head) == "refs/heads/master" ]]; then
+    fail "Committing to master is not allowed."
+  fi
+}
+
+disallow_committing_nocommits() {
+  nocommit_lines=$(git grep --cached NOCOMMIT)
+  if any_nocommits_are_being_added; then
+    fail "Can't commit NOCOMMITs:\n$(nocommits_in_the_stage)"
+  fi
+}
+
+# This logic is imperfect, but good enough.
+any_nocommits_are_being_added() {
+  nocommits_are_being_added_or_removed && the_stage_includes_a_nocommit
+}
+
+nocommits_are_being_added_or_removed() {
+  [[ -n $(git diff -S NOCOMMIT --cached) ]]
+}
+
+the_stage_includes_a_nocommit() {
+  nocommits_in_the_stage >/dev/null
+}
+
+nocommits_in_the_stage() {
+  git grep --cached NOCOMMIT
+}
+
+fail() {
+  echo "$@" >/dev/stderr
+  exit 1
+}
+
+main
