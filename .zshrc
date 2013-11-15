@@ -1,3 +1,12 @@
+# To profile the run time of this file, use:
+# $ whyslow
+#
+# Tip: To see which plugins are taking a long time to load, look through the
+# results for -antigen-load and see what it's calling that takes so long.
+
+[ -n "$PROFILE_INIT" ] && zmodload zsh/zprof
+
+
 ### OMZsh Options ###
 COMPLETION_WAITING_DOTS="true"
 
@@ -9,8 +18,6 @@ antigen use oh-my-zsh
 
 antigen bundles <<BUNDLES
   brew
-  gem
-  rbenv
   Peeja/ctrl-zsh
 
   # Note: zsh-syntax-highlighting needs to be the last bundle, according to its README.
@@ -29,6 +36,12 @@ bindkey -A emacs main
 
 
 ### Aliases ###
+
+# Output total time to load zsh.
+alias loadtime="time zsh -il -c exit >/dev/null"
+
+# Profile the run time of this file.
+alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 
 # Use hub as git.
 alias git=hub
@@ -64,3 +77,6 @@ gmailbackup() {
 ### Options ###
 setopt globcomplete
 stty -ixon  # Turn off XOFF/XON (software flow control) and free up <C-S> for vim bindings.
+
+
+[ -n "$PROFILE_INIT" ] && zprof
