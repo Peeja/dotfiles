@@ -410,12 +410,6 @@
 	<false/>
 	<key>MinimumContrast</key>
 	<real>0.0</real>
-	<key>NSColorPanelMode</key>
-	<string>3</string>
-	<key>NSColorPickerSlidersDefaults</key>
-	<string>3</string>
-	<key>NSNavBrowserPreferedColumnContentWidth</key>
-	<real>186</real>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -435,37 +429,24 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>198</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
-	<key>NSToolbar Configuration Terminal Toolbar</key>
-	<dict>
-		<key>TB Display Mode</key>
-		<integer>1</integer>
-		<key>TB Icon Size Mode</key>
-		<integer>1</integer>
-		<key>TB Is Shown</key>
-		<integer>0</integer>
-		<key>TB Size Mode</key>
-		<integer>1</integer>
-	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>2049 90 445 270 0 0 2560 1418 </string>
+	<string>2049 81 445 270 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>736 546 605 485 0 0 2560 1440 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1088 989 384 129 0 0 2560 1418 </string>
+	<string>398 686 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1440 0 0 2560 1418 </string>
+	<string>0 92 1279 1326 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>5 98 1270 647 0 0 2560 1418 </string>
+	<string>1280 81 1280 1337 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 112 2560 1306 0 0 2560 1418 </string>
+	<string>309 141 730 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>0 692 970 701 0 0 2560 1418 </string>
+	<string>225 235 730 526 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_57E0F5A6-A8B7-4F0C-864F-8A7147D84CFA</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_737DCEE0-8B75-4D08-8573-54EB40CAEA25</key>
@@ -916,7 +897,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Inconsolata 24</string>
+			<string>Inconsolata 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -1757,7 +1738,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/peeja/.iterm2/</string>
+	<string>~/.iterm2</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1775,7 +1756,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-11-14T22:05:28Z</date>
+	<date>2013-11-15T16:52:52Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1834,6 +1815,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20130624</string>
+	<string>1.0.0.20130622</string>
 </dict>
 </plist>
