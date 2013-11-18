@@ -14,8 +14,10 @@
 /Documents
 /Downloads
 /Dropbox
-/Library
+/Library/*
 /Movies
 /Music
 /Pictures
 /Public
+
+!/Library/KeyBindings
