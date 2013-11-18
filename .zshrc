@@ -6,6 +6,9 @@
 
 [ -n "$PROFILE_INIT" ] && zmodload zsh/zprof
 
+## Make sure we're up to date. ##
+git submodule update --init
+
 
 ### OMZsh Options ###
 COMPLETION_WAITING_DOTS="true"
