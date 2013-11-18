@@ -43,6 +43,9 @@ bindkey -A emacs main
 # Output total time to load zsh.
 alias loadtime="time zsh -il -c exit >/dev/null"
 
+# Output total time to render prompt.
+alias prompttime='time (print -P "$PS1") > /dev/null'
+
 # Profile the run time of this file.
 alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 
