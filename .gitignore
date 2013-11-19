@@ -7,6 +7,9 @@
 /.dropbox-master
 /.lesshst
 /.ssh
+/.vim/.netrwhist
+/.vim/bundle
+/.viminfo
 /.zcompdump
 /.zsh_history
 /Applications
@@ -21,3 +24,4 @@
 /Public
 
 !/Library/KeyBindings
+!/.vim/bundle/neobundle.vim
