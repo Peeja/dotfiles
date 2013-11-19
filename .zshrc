@@ -58,9 +58,9 @@ alias t="tmux attach -t"
 alias tnew="tmux new-session -s"
 alias tcd="pwd | xargs tmux set default-path"
 
+
 ### Options ###
 setopt globcomplete
-stty -ixon  # Turn off XOFF/XON (software flow control) and free up <C-S> for vim bindings.
 
 
 [ -n "$PROFILE_INIT" ] && zprof
