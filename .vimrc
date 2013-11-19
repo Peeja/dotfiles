@@ -10,15 +10,47 @@
 " merge between branches and repos.
 "
 " Please do not add configuration to this file, unless it *really* needs to
-" come first or last, like bootstrapping Vim-Flavor.  Instead, add it to one
-" of the files in .vim/init, or create a new one.
+" come first or last, like bootstrapping the bundle loader.  Instead, add it
+" to one of the files in .vim/init, or create a new one.
 
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
 
-" Basic Setup
-" -----------
+call neobundle#rc()
 
-set nocompatible                " Don't maintain compatibility with vi
-execute pathogen#infect()
+NeoBundle "altercation/vim-colors-solarized"
+NeoBundle "duwanis/tomdoc.vim"
+NeoBundle "godlygeek/tabular"
+NeoBundle "kana/vim-textobj-user"
+NeoBundle "kchmck/vim-coffee-script"
+NeoBundle "msanders/snipmate.vim"
+NeoBundle "nelstrom/vim-textobj-rubyblock"
+NeoBundle "pangloss/vim-javascript"
+NeoBundle "Peeja/vim-cdo"
+NeoBundle "plasticboy/vim-markdown"
+NeoBundle "regreplop.vim"
+NeoBundle "scrooloose/syntastic"
+NeoBundle "sjl/gundo.vim"
+NeoBundle "thoughtbot/vim-rspec"
+NeoBundle "tpope/vim-abolish"
+NeoBundle "tpope/vim-bundler"
+NeoBundle "tpope/vim-cucumber"
+NeoBundle "tpope/vim-dispatch"
+NeoBundle "tpope/vim-endwise"
+NeoBundle "tpope/vim-fugitive"
+NeoBundle "tpope/vim-haml"
+NeoBundle "tpope/vim-rails"
+NeoBundle "tpope/vim-rake"
+NeoBundle "tpope/vim-repeat"
+NeoBundle "tpope/vim-speeddating"
+NeoBundle "tpope/vim-surround"
+NeoBundle "tpope/vim-unimpaired"
+NeoBundle "vim-ruby/vim-ruby"
+
+NeoBundleCheck
+
 syntax on                       " Highlight known syntaxes
 filetype plugin indent on       " Recognize filetypes
 
@@ -27,10 +59,3 @@ filetype plugin indent on       " Recognize filetypes
 " ---------------------------
 
 runtime! init/**.vim
-
-
-" Enable Project-Specific .vimrcs
-" -------------------------------
-
-set exrc
-set secure
