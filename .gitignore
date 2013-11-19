@@ -9,6 +9,7 @@
 /.ssh
 /.vim/.netrwhist
 /.vim/bundle
+/.viminfo
 /.zcompdump
 /.zsh_history
 /Applications
