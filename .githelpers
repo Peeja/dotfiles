@@ -52,3 +52,19 @@ start_work_on_gh_issue() {
   # git push origin HEAD -u
   # hub pull-request -i $issue_number
 }
+
+git_whatsnew() {
+  git submodule --quiet foreach "source ${BASH_SOURCE[0]} && git_whatsnew_each \$name"
+}
+
+git_whatsnew_each() {
+  name=$1
+
+  git fetch origin
+  output=$(git l HEAD..origin/master)
+  if [[ -n "$output" ]]; then
+    echo
+    echo "$name"
+    echo "$output"
+  fi
+}
