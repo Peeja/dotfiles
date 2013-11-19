@@ -1,4 +1,3 @@
-/git
 /.CFUserTextEncoding
 /.Trash
 /.antigen
@@ -24,6 +23,8 @@
 /Music
 /Pictures
 /Public
+/clients
+/git
 
 !/Library/KeyBindings
 !/.vim/bundle/neobundle.vim
