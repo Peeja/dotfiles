@@ -42,3 +42,7 @@ map <leader>u   :GundoToggle<CR>
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Commenting.
+nmap <leader>/  gcc
+vmap <leader>/  gc
