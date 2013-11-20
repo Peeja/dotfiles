@@ -440,13 +440,15 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>398 686 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 92 1279 1326 0 0 2560 1418 </string>
+	<string>0 881 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1280 81 1280 1337 0 0 2560 1418 </string>
+	<string>1280 881 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>309 141 730 526 0 0 1440 878 </string>
+	<string>1280 81 1280 1337 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>225 235 730 526 0 0 1440 878 </string>
+	<string>580 596 730 526 0 0 2560 1418 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>482 892 730 526 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_57E0F5A6-A8B7-4F0C-864F-8A7147D84CFA</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_737DCEE0-8B75-4D08-8573-54EB40CAEA25</key>
@@ -905,7 +907,7 @@
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
@@ -1756,7 +1758,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-11-15T16:52:52Z</date>
+	<date>2013-11-20T14:39:10Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
