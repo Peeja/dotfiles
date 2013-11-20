@@ -6,6 +6,7 @@
 /.dropbox
 /.dropbox-master
 /.lesshst
+/.rubies
 /.ssh
 /.subversion
 /.vim/.netrwhist
@@ -25,6 +26,7 @@
 /Public
 /clients
 /git
+/src
 
 !/Library/KeyBindings
 !/.vim/bundle/neobundle.vim
