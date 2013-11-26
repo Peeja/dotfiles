@@ -7,7 +7,7 @@ let maplocalleader = ";"
 " Make Y consistent with D and C
 map Y           y$
 
-" Search
+" Substitution
 nmap <leader>s  :%s/
 vmap <leader>s  :s/
 
