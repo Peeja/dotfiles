@@ -69,3 +69,5 @@ set hls                         " search with highlights by default
 " Write all writeable buffers when changing buffers or losing focus.
 set autowrite autowriteall       " Save when doing various buffer-switching things.
 autocmd BufLeave * silent! wall  " Save anytime we leave a buffer.
+
+set grepprg=ack                 " Grep with ack.
