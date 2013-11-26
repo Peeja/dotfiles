@@ -66,8 +66,6 @@ set viminfo+=!                  " Save UPPERCASE globals in viminfo (useful for 
 
 set hls                         " search with highlights by default
 
-" Write all writeable buffers when changing buffers or losing focus.
-set autowrite autowriteall       " Save when doing various buffer-switching things.
-autocmd BufLeave * silent! wall  " Save anytime we leave a buffer.
+set autowrite autowriteall      " Save before doing most things
 
 set grepprg=ack                 " Grep with ack.

@@ -1,7 +1,7 @@
 if !has("gui_running")
   " Map Cmd-S to <F12> in iTerm2 for Save.
-  map <F12> :w<CR>
-  map! <F12> <C-o>:w<CR>
+  map <F12> :wall<CR>
+  map! <F12> <C-o>:wall<CR>
 
   " Makes Command-T work again with arrow keys.  Not clear why.
   nmap <Esc>[A <Up>
