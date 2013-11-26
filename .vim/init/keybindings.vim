@@ -16,7 +16,7 @@ nnoremap <C-e>  3<C-e>
 nnoremap <C-y>  3<C-y>
 
 " Switch to alternate file
-map <leader>e   :e#<CR>
+nmap <leader>e  :e #<CR>
 
 " Make command-line mode shell-like:
 "   C-A: To beginning of line
@@ -46,3 +46,7 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " Commenting.
 nmap <leader>/  gcc
 vmap <leader>/  gc
+
+" Directory browsing
+nmap \          :e .<CR>
+nmap \|         :e %:h<CR>
