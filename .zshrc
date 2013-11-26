@@ -61,6 +61,13 @@ alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 alias git=hub
 compdef hub=git
 
+# Zeus shortcuts
+alias zc="zeus console"
+alias zdb="zeus dbconsole"
+alias zr="zeus rake"
+alias zs="zeus server"
+alias zst="zeus start"
+
 # tmux helpers
 alias t="tmux attach -t"
 alias tnew="tmux new-session -s"
