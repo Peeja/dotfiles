@@ -1,9 +1,3 @@
-set guifont=Inconsolata:h18
-set guioptions-=T               " Remove GUI toolbar
-set guioptions-=e               " Use text tab bar, not GUI
-set guioptions-=rL              " Remove scrollbars
-set guicursor=a:blinkon0        " Turn off the blinking cursor
-
 set notimeout                   " No command timeout
 set ttimeout ttimeoutlen=100    " But timeout on terminal escape codes, like arrow keys
 set showcmd                     " Show typed command prefixes while waiting for operator
@@ -25,12 +19,7 @@ set wildignore+=vendor/**          " ...Also vendor.
 set foldlevelstart=99           " By default, open files completely unfolded.
 
 set list                        " Show whitespace
-if has("gui_running")
-  " NOCOMMIT
-  set listchars=trail:·
-else
-  set listchars=trail:~
-endif
+set listchars=trail:~
 
 set showmatch                   " Show matching brackets
 set hidden                      " Allow hidden, unsaved buffers
