@@ -64,7 +64,7 @@ compdef hub=git
 # Zeus shortcuts
 alias zc="zeus console"
 alias zdb="zeus dbconsole"
-alias zr="zeus rake"
+alias zr="noglob zeus rake"
 alias zs="zeus server"
 alias zst="zeus start"
 
@@ -72,6 +72,9 @@ alias zst="zeus start"
 alias t="tmux attach -t"
 alias tnew="tmux new-session -s"
 alias tcd="pwd | xargs tmux set default-path"
+
+# Disable some autocorrection
+alias zeus="nocorrect zeus"
 
 
 ### Options ###
