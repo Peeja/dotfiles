@@ -6,9 +6,14 @@
 /.config/hub
 /.dropbox
 /.dropbox-master
+/.gem/
 /.guard_history
+/.heroku/
 /.irb_history
 /.lesshst
+/.netrc
+/.phantomjs/
+/.pow
 /.psql_history
 /.rubies
 /.ssh
@@ -31,6 +36,7 @@
 /clients
 /git
 /src
+/tmp/
 
 !/Library/KeyBindings
 !/.vim/bundle/neobundle.vim
