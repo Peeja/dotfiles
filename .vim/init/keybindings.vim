@@ -50,3 +50,6 @@ vmap <leader>/  gc
 " Directory browsing
 nmap \          :e .<CR>
 nmap \|         :e %:h<CR>
+
+" Close quickfix window
+nmap <leader>q  :cclose<CR>
