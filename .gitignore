@@ -5,6 +5,7 @@
 /.config/hub
 /.dropbox
 /.dropbox-master
+/.irb_history
 /.lesshst
 /.rubies
 /.ssh
