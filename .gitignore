@@ -2,11 +2,14 @@
 /.Trash
 /.antigen
 /.bash_history
+/.byebug_hist
 /.config/hub
 /.dropbox
 /.dropbox-master
+/.guard_history
 /.irb_history
 /.lesshst
+/.psql_history
 /.rubies
 /.ssh
 /.subversion
