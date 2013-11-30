@@ -7,29 +7,12 @@
 [ -n "$PROFILE_INIT" ] && zmodload zsh/zprof
 
 ## Make sure we're up to date. ##
-git submodule update --init
+git submodule update --init --recursive
 
-
-### OMZsh Options ###
-COMPLETION_WAITING_DOTS="true"
-
-
-### Antigen ###
-source ~/antigen/antigen.zsh
-
-antigen use oh-my-zsh
-
-antigen bundles <<BUNDLES
-  brew
-  Peeja/ctrl-zsh
-
-  # Note: zsh-syntax-highlighting needs to be the last bundle, according to its README.
-  zsh-users/zsh-syntax-highlighting
-BUNDLES
-
-antigen theme clean
-
-antigen apply
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 
 ## chruby ##
@@ -38,12 +21,6 @@ if [[ -d /usr/local/opt/chruby/share/chruby ]]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
-
-
-### Keys ###
-
-# Emacs mode
-bindkey -A emacs main
 
 
 ### Aliases ###

@@ -23,7 +23,8 @@
 /.vim/bundle
 /.viminfo
 /.zcompdump
-/.zsh_history
+/.zcompdump.zwc
+/.zhistory
 /Applications
 /Desktop
 /Documents
