@@ -1,8 +1,5 @@
 # To profile the run time of this file, use:
 # $ whyslow
-#
-# Tip: To see which plugins are taking a long time to load, look through the
-# results for -antigen-load and see what it's calling that takes so long.
 
 [ -n "$PROFILE_INIT" ] && zmodload zsh/zprof
 
@@ -28,15 +25,15 @@ fi
 # Output total time to load zsh.
 alias loadtime="time zsh -il -c exit >/dev/null"
 
-# Output total time to render prompt.
-alias prompttime='time (print -P "$PS1") > /dev/null'
-
 # Profile the run time of this file.
 alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 
 # Use hub as git.
-alias git=hub
-compdef hub=git
+# Disabled temporarily: It makes the prompt slow.
+# https://github.com/sorin-ionescu/prezto/issues/507
+#
+# alias git=hub
+# compdef hub=git
 
 # Zeus shortcuts
 alias zc="zeus console"
@@ -54,8 +51,37 @@ alias tcd="pwd | xargs tmux set default-path"
 alias zeus="nocorrect zeus"
 
 
+## Functions
+
+# Show times to run preexec functions and render prompt.
+function prompttime {
+  TIMEFMT="%E"
+
+  for f in $precmd_functions; do
+    echo -n "$f\t"
+    time ($f) > /dev/null
+  done
+
+  echo -n "PROMPT\t"
+  time (print -P "$PROMPT") > /dev/null
+}
+
+# Profile a function with zprof.
+# Usage: zprof-func some-function with-arguments
+function zprof-func {
+  (
+    unset precmd_functions
+    zmodload zsh/zprof
+    $@
+    zprof
+  )
+}
+
+
 ### Options ###
 setopt globcomplete
 
 
 [ -n "$PROFILE_INIT" ] && zprof
+
+return 0
