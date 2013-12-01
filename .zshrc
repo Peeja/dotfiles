@@ -79,7 +79,10 @@ function zprof-func {
 
 
 ### Options ###
-setopt globcomplete
+setopt GLOB_COMPLETE
+setopt HUP
+setopt CHECK_JOBS
+unsetopt AUTO_RESUME
 
 
 [ -n "$PROFILE_INIT" ] && zprof
