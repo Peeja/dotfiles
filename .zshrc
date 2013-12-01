@@ -83,6 +83,7 @@ setopt GLOB_COMPLETE
 setopt HUP
 setopt CHECK_JOBS
 unsetopt AUTO_RESUME
+unsetopt NOTIFY
 
 
 [ -n "$PROFILE_INIT" ] && zprof
@@ -113,9 +114,16 @@ function jobs-info {
   local suspended_format
   zstyle -s ":prezto:module:jobs:info:count:suspended:$suspended_job_count" format suspended_format
   jobs_info[suspended]="$suspended_format"
+
+  local running_job_count=${(Mw)#jobstates#running:}
+  local running_format
+  zstyle -s ":prezto:module:jobs:info:count:running:$running_job_count" format running_format
+  jobs_info[running]="$running_format"
 }
 
 add-zsh-hook precmd jobs-info
+
+TRAPCHLD() { jobs-info }
 
 
 zstyle ':prezto:module:jobs:info:count:*:0' format ''
@@ -124,11 +132,21 @@ zstyle ':prezto:module:jobs:info:count:*:0' format ''
   local circled_numbers
   circled_numbers=(➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓)
   for n in {1..10}; do
-    zstyle ":prezto:module:jobs:info:count:*:$n" format $circled_numbers[$n]
+    zstyle ":prezto:module:jobs:info:count:*:$n" format " $circled_numbers[$n]"
   done
 }
 
-zstyle ':prezto:module:jobs:info:count:*:*' format ✪
+zstyle ':prezto:module:jobs:info:count:*:*' format " ✪"
 
 
-RPROMPT="%F{blue}\$jobs_info[suspended]%f$RPROMPT"
+RPROMPT="%F{green}\$jobs_info[running]%f%F{blue}\$jobs_info[suspended]%f$RPROMPT"
+
+
+# keep-prompt-current
+
+function keep-prompt-current {
+  zle && zle reset-prompt
+  sched +1 keep-prompt-current
+}
+
+keep-prompt-current
