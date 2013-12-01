@@ -87,4 +87,48 @@ unsetopt AUTO_RESUME
 
 [ -n "$PROFILE_INIT" ] && zprof
 
-return 0
+
+## Modules in progress...
+
+# Ctrl-Zsh
+
+# ^Z to foreground the last suspended job.
+foreground-current-job() { fg; zle reset-prompt; }
+zle -N foreground-current-job
+bindkey -M emacs '^z' foreground-current-job
+
+
+# Jobs
+
+zmodload zsh/parameter
+
+# TODO: Make it an actual format string.
+# FIXME: Prompt doesn't refresh after ending job fg'ed with Ctrl-Zsh.
+function jobs-info {
+  # Clean up previous $jobs_info.
+  unset jobs_info
+  typeset -gA jobs_info
+
+  local suspended_job_count=${(Mw)#jobstates#suspended:}
+  local suspended_format
+  zstyle -s ":prezto:module:jobs:info:count:suspended:$suspended_job_count" format suspended_format
+  jobs_info[suspended]="$suspended_format"
+}
+
+add-zsh-hook precmd jobs-info
+
+
+zstyle ':prezto:module:jobs:info:count:*:0' format ''
+
+() {
+  local circled_numbers
+  circled_numbers=(➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓)
+  for n in {1..10}; do
+    zstyle ":prezto:module:jobs:info:count:*:$n" format $circled_numbers[$n]
+  done
+}
+
+zstyle ':prezto:module:jobs:info:count:*:*' format ✪
+
+
+RPROMPT="%F{blue}\$jobs_info[suspended]%f$RPROMPT"
