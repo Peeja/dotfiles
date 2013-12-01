@@ -35,6 +35,10 @@ alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 # alias git=hub
 # compdef hub=git
 
+# Trying out gh, a hub clone written in Go, instead.
+alias git=gh
+compdef gh=git
+
 # Zeus shortcuts
 alias zc="zeus console"
 alias zdb="zeus dbconsole"
