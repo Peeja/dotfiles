@@ -4,7 +4,7 @@
 [ -n "$PROFILE_INIT" ] && zmodload zsh/zprof
 
 ## Make sure we're up to date. ##
-git submodule update --init --recursive
+(cd ~; git submodule update --init --recursive)
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
