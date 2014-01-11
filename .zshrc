@@ -89,6 +89,9 @@ setopt CHECK_JOBS
 unsetopt AUTO_RESUME
 unsetopt NOTIFY
 
+# Turn off flow control, free up <C-S> and <C-Q> keys.
+stty -ixon
+
 
 [ -n "$PROFILE_INIT" ] && zprof
 
