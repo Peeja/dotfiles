@@ -53,3 +53,6 @@ nmap \|         :e %:h<CR>
 
 " Close quickfix window
 nmap <leader>q  :cclose<CR>
+
+" Dispatch.vim
+nmap <leader><space> :Dispatch<CR>
