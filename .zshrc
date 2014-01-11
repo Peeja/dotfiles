@@ -130,8 +130,6 @@ function jobs-info {
 
 add-zsh-hook precmd jobs-info
 
-TRAPCHLD() { jobs-info }
-
 
 zstyle ':prezto:module:jobs:info:count:*:0' format ''
 
@@ -147,13 +145,3 @@ zstyle ':prezto:module:jobs:info:count:*:*' format " ✪"
 
 
 RPROMPT="%F{green}\$jobs_info[running]%f%F{blue}\$jobs_info[suspended]%f$RPROMPT"
-
-
-# keep-prompt-current
-
-function keep-prompt-current {
-  zle && zle reset-prompt
-  sched +1 keep-prompt-current
-}
-
-keep-prompt-current
