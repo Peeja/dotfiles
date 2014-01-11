@@ -15,6 +15,7 @@ fi
 # (erroneously) changes the path.
 
 path=(
+  $HOME/bin
   /usr/local/{bin,sbin}
   $path
 )

@@ -1,0 +1,41 @@
+#!/bin/zsh
+
+set -e
+
+usage () {
+  local name=$1
+  fail "Usage: $name <gmail-account-name>"
+}
+
+main () {
+  local service="Gmail Backup"
+  local account="$1"
+
+  if ! type gmail-backup >/dev/null; then
+    fail "Please install gmail-backup. (brew install gmail-backup)"
+  fi
+
+  local security_response="$(security find-generic-password -s "$service" -a "$account" -g 2>&1 >/dev/null)"
+
+  if [[ -z "$security_response" ]]; then
+    fail "Denied access to $service password for $account."
+  elif [[ "$security_response" =~ "The specified item could not be found in the keychain." ]]; then
+    fail "No password found in keychain.\nPlease add a password called \"$service\" for account \"$account\" to the keychain."
+  fi
+
+  # Parse password from response.
+  local password="$(echo $security_response | sed 's/password: "\(.*\)"/\1/')"
+
+  gmail-backup backup "~/mail/$account" "$account" "$password" --stamp
+}
+
+fail () {
+  echo $1 >/dev/stderr
+  exit 1
+}
+
+if [[ $# -eq 0 ]]; then
+  usage $0
+else
+  main "$@"
+fi
