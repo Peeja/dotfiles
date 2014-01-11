@@ -44,7 +44,7 @@ alias zc="zeus console"
 alias zdb="zeus dbconsole"
 alias zr="noglob zeus rake"
 alias zs="zeus server"
-alias zst="zeus start"
+alias zst="clear && zeus start"
 
 # tmux helpers
 alias t="tmux attach -t"
