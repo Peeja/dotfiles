@@ -53,6 +53,9 @@
   trust   = "!mkdir .git/trusted"
   untrust = "!rmdir .git/trusted"
 
+  wip   = "!git add -A && git commit --no-verify --message=WIP"
+  unwip = "!source ~/.githelpers && git_unwip"
+
 [merge]
   summary = true
 

@@ -68,3 +68,12 @@ git_whatsnew_each() {
     echo "$output"
   fi
 }
+
+git_unwip() {
+  local msg="$(git log -1 --pretty=format:%s)"
+  if [[ "$msg" == "WIP" ]]; then
+    git reset HEAD^
+  else
+    echo "Couldn't unwip. HEAD is not a WIP, but is \"$msg\"" > /dev/stderr
+  fi
+}
