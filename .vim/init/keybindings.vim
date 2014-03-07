@@ -10,6 +10,8 @@ map Y           y$
 " Substitution
 nmap <leader>s  :%s/
 vmap <leader>s  :s/
+nmap <leader>S  :%S/
+vmap <leader>S  :S/
 
 " Fast scrolling
 nnoremap <C-e>  3<C-e>
