@@ -12,12 +12,40 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 
+# OS X's /etc/zshenv (erroneously) changes the path. That should really be set
+# in /etc/zshrc, which is only loaded for the outermost shell. Subshells should
+# inherit the path set in /etc/zshrc and ~/.zshrc. Instead, /etc/zshenv (which
+# loads for each subshell) overwrites the path.
+#
+# To get around that, we secret away the path in this environment variable.
+# Then we restore it in ~/.zshenv.
+#
+# Call this function any time you modify the path to update it.
+function skirt_osx_path_helper__update {
+  export PATH__SKIRT_OSX_PATH_HELPER="$PATH"
+}
+
+
+path=(
+  $HOME/bin
+  /usr/local/{bin,sbin}
+  $path
+)
+
+# Ensure path arrays do not contain duplicates.
+typeset -gU cdpath fpath mailpath path
+
 ## chruby ##
 
 if [[ -d /usr/local/opt/chruby/share/chruby ]]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
+
+skirt_osx_path_helper__update
+
+# chruby will update our path on preexec, so now we need to watch for that change.
+preexec_functions+=("skirt_osx_path_helper__update")
 
 
 ### Aliases ###
