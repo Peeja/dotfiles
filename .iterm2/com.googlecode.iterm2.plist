@@ -376,6 +376,8 @@
 	<false/>
 	<key>HideActivityIndicator</key>
 	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
@@ -410,6 +412,8 @@
 	<false/>
 	<key>MinimumContrast</key>
 	<real>0.0</real>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -436,15 +440,15 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>2049 81 445 270 0 0 2560 1418 </string>
+	<string>881 -21 445 270 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>398 686 924 485 0 0 2560 1418 </string>
+	<string>450 712 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 881 730 526 0 0 2560 1418 </string>
+	<string>0 892 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1280 881 730 526 0 0 2560 1418 </string>
+	<string>0 889 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1280 81 1280 1337 0 0 2560 1418 </string>
+	<string>1391 219 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>580 596 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1758,7 +1762,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-11-20T14:39:10Z</date>
+	<date>2014-03-07T23:00:26Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1817,6 +1821,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20130622</string>
+	<string>1.0.0.20140112</string>
 </dict>
 </plist>
