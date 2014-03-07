@@ -131,9 +131,6 @@ unsetopt NOTIFY
 stty -ixon
 
 
-[ -n "$PROFILE_INIT" ] && zprof
-
-
 ## Modules in progress...
 
 # Ctrl-Zsh
@@ -183,3 +180,6 @@ zstyle ':prezto:module:jobs:info:count:*:*' format " ✪"
 
 
 RPROMPT="%F{green}\$jobs_info[running]%f%F{blue}\$jobs_info[suspended]%f$RPROMPT"
+
+
+[ -n "$PROFILE_INIT" ] && zprof
