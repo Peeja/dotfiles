@@ -25,6 +25,7 @@ set showmatch                   " Show matching brackets
 set hidden                      " Allow hidden, unsaved buffers
 set splitright                  " Add new windows towards the right...
 set splitbelow                  " ...and bottom.
+set switchbuf=useopen           " :help 'switchbuf'
 set wildmode=list:longest       " Bash/Zsh-like tab completion
 set scrolloff=3                 " Scroll when the cursor is 3 lines from edge
 set cursorline                  " Highlight current line
