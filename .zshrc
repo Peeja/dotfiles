@@ -78,12 +78,11 @@ alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 alias git=gh
 compdef gh=git
 
-# Zeus shortcuts
-alias zc="zeus console"
-alias zdb="zeus dbconsole"
-alias zr="noglob zeus rake"
-alias zs="zeus server"
-alias zst="clear && zeus start"
+# Rails shortcuts
+alias rc="rails console"
+alias rdb="rails dbconsole"
+alias rr="noglob rails rake"
+alias rs="rails server"
 
 # tmux helpers
 alias t="tmux attach -t"
