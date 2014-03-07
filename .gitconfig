@@ -47,9 +47,6 @@
   n = "!source ~/.githelpers && new_git_branch_from_origin_master"
   start = "!source ~/.githelpers && start_work_on_gh_issue"
 
-  # Fetch and show new remote changes in submodules.
-  whatsnew = "!source ~/.githelpers && git_whatsnew"
-
   trust   = "!mkdir .git/trusted"
   untrust = "!rmdir .git/trusted"
 
