@@ -35,6 +35,16 @@ path=(
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
+# We generally want trusted binstubs to come before chruby's gem binaries.
+
+function git_trusted__update {
+  path=(
+    ./.git/trusted/../../bin
+    $path
+  )
+  typeset -gU path
+}
+
 ## chruby ##
 
 if [[ -d /usr/local/opt/chruby/share/chruby ]]; then
@@ -43,9 +53,10 @@ if [[ -d /usr/local/opt/chruby/share/chruby ]]; then
 fi
 
 skirt_osx_path_helper__update
+git_trusted__update
 
 # chruby will update our path on preexec, so now we need to watch for that change.
-preexec_functions+=("skirt_osx_path_helper__update")
+preexec_functions+=("git_trusted__update" "skirt_osx_path_helper__update")
 
 
 ### Aliases ###
