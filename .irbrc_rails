@@ -1,0 +1,4 @@
+def log_to_console!
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  nil
+end
