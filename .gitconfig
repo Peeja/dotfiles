@@ -56,6 +56,9 @@
   wip   = "!git add -A && git commit --no-verify --message=WIP"
   unwip = "!source ~/.githelpers && git_unwip"
 
+  fixup      = commit --fixup
+  autosquash = rebase --interactive --autosquash
+
 [merge]
   summary = true
 
