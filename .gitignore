@@ -44,7 +44,6 @@
 /Downloads
 /Dropbox
 /Inbox
-/Library/*
 /Movies
 /Music
 /Pictures
@@ -56,5 +55,10 @@
 /src
 /tmp/
 
+/Library/*
 !/Library/KeyBindings
+!/Library/Application Support
+/Library/Application Support/*
+!/Library/Application Support/KeyRemap4MacBook
+
 !/.vim/bundle/neobundle.vim

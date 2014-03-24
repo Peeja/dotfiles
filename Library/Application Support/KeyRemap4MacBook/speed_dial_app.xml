@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<root>
+  <!-- Defaults -->
+
+  <replacementdef>
+    <replacementname>APP_PATH</replacementname>
+    <replacementvalue>{{ ENV_HOME }}/Applications</replacementvalue>
+  </replacementdef>
+
+  <replacementdef>
+    <replacementname>HIDE_KEY</replacementname>
+    <replacementvalue>KeyCode::H, ModifierFlag::COMMAND_L</replacementvalue>
+  </replacementdef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SPEEDDIAL_{{ APP_NAME }}</name>
+    <url type="file">{{ APP_PATH }}/{{ APP_NAME }}.app</url>
+  </vkopenurldef>
+
+  <appdef>
+    <appname>{{ APP_NAME }}</appname>
+    <equal>{{ APP_BUNDLE_ID }}</equal>
+  </appdef>
+
+  <group>
+    <not>{{ APP_NAME }}</not>
+    <autogen>__KeyToKey__ KeyCode::{{ KEY }}, ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SPEEDDIAL_{{ APP_NAME }}</autogen>
+  </group>
+
+  <group>
+    <only>{{ APP_NAME }}</only>
+    <autogen>__KeyToKey__ KeyCode::{{ KEY }}, ModifierFlag::NONE, {{ HIDE_KEY }}</autogen>
+  </group>
+</root>

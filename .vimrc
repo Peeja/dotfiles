@@ -21,6 +21,7 @@ endif
 call neobundle#rc()
 
 NeoBundle "altercation/vim-colors-solarized"
+NeoBundle "christoomey/vim-tmux-navigator"
 NeoBundle "duwanis/tomdoc.vim"
 NeoBundle "godlygeek/tabular"
 NeoBundle "kana/vim-textobj-user"

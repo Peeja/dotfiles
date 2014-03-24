@@ -1,4 +1,19 @@
 if !has("gui_running")
+  if &term =~ "^screen"
+    " VT220-style function key codes.
+    set <F13>=[25~
+    set <F14>=[26~
+    set <F15>=[28~
+    set <F16>=[29~
+    set <F17>=[31~
+  elseif &term =~ "^xterm"
+    set <F13>=[1;2P
+    set <F14>=[1;2Q
+    set <F15>=[1;2R
+    set <F16>=[1;2S
+    set <F17>=[15;2~
+  endif
+
   " Map Cmd-S to <F12> in iTerm2 for Save.
   map <F12> :w\|wall<CR>
   map! <F12> <C-o>:w\|wall<CR>

@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Universal Pane Switcher</name>
+    <item>
+      <name>Hold D and F, then press HJKL to switch Vim/Tmux panes.</name>
+      <appendix>(This actually maps those keystrokes to F13-F16. Pane switching</appendix>
+      <appendix>depends on Vim, Tmux and iTerm playing along.)</appendix>
+      <identifier vk_config="true">notsave.private.paneswitcher</identifier>
+      <only>iTerm</only>
+      <autogen>__ShowStatusMessage__ Pane Switcher</autogen>
+      <autogen>__KeyToKey__ KeyCode::H, KeyCode::F13</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::F14</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::F15</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::F16</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F17</autogen>
+    </item>
+    <item>
+      <name>Holding [D+F] turns on "Pane Switcher" mode</name>
+      <identifier>remap.paneswitcher_sd</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_paneswitcher</autogen>
+    </item>
+  </item>
+
+  <item>
+    <name>Speed Dial</name>
+    <item>
+      <name>Hold S and D, then press another key to switch to the application assigned to it.</name>
+      <appendix>Some applications will hide when their key is pressed if they're</appendix>
+      <appendix>already frontmost. This varies accordiong to how useful it is.</appendix>
+      <appendix>See comments in private.xml, where the mappings are defined.</appendix>
+      <identifier vk_config="true">notsave.private.speeddial</identifier>
+      <autogen>__ShowStatusMessage__ Speed Dial</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::N, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>O</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>OmniFocus</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.omnigroup.OmniFocus</replacementvalue>
+        </replacementdef>
+        </include>
+
+        <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>P</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Pandora</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.fluidapp.FluidApp.Pandora</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>J</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>iTerm</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.googlecode.iterm2</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>HIDE_KEY</replacementname>
+          <replacementvalue>KeyCode::VK_NONE</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>K</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Google Chrome</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.google.Chrome</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+
+        <!--
+          Sometimes, when Chrome is hidden and then activated with Speed
+          Dial, it restores one of its minimized windows. It appears to be a
+          bug in Chrome. To avoid that, we disable the hiding part of Speed
+          Dial for Chrome, so we never hide it.
+        -->
+        <replacementdef>
+          <replacementname>HIDE_KEY</replacementname>
+          <replacementvalue>KeyCode::VK_NONE</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>SEMICOLON</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Flint</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.giantcomet.flint</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+    </item>
+    <item>
+      <name>Holding [D+F] turns on "Speed Dial" mode</name>
+      <identifier>remap.speeddial_sd</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_speeddial</autogen>
+    </item>
+  </item>
+</root>

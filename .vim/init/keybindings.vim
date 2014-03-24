@@ -58,3 +58,12 @@ nmap <leader>q  :cclose<CR>
 
 " Dispatch.vim
 nmap <leader><space> :Dispatch<CR>
+
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <F13> :TmuxNavigateLeft<CR>
+nnoremap <silent> <F14> :TmuxNavigateDown<CR>
+nnoremap <silent> <F15> :TmuxNavigateUp<CR>
+nnoremap <silent> <F16> :TmuxNavigateRight<CR>
+nnoremap <silent> <F17> :TmuxNavigatePrevious<CR>
