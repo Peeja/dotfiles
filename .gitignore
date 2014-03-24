@@ -7,6 +7,7 @@
 /.config
 /.config/gh
 /.config/hub
+/.cpan
 /.cups/
 /.dropbox
 /.dropbox-master
