@@ -52,6 +52,12 @@ if [[ -d /usr/local/opt/chruby/share/chruby ]]; then
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
 
+
+## Perl local::lib ##
+
+eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+
+
 skirt_osx_path_helper__update
 git_trusted__update
 
