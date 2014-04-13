@@ -67,3 +67,6 @@ nnoremap <silent> <F14> :TmuxNavigateDown<CR>
 nnoremap <silent> <F15> :TmuxNavigateUp<CR>
 nnoremap <silent> <F16> :TmuxNavigateRight<CR>
 nnoremap <silent> <F17> :TmuxNavigatePrevious<CR>
+
+" vinegar.vim: Use split when directory browsing.
+nmap - <Plug>VinegarSplitUp

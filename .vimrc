@@ -59,6 +59,7 @@ NeoBundle "tpope/vim-repeat"
 NeoBundle "tpope/vim-speeddating"
 NeoBundle "tpope/vim-surround"
 NeoBundle "tpope/vim-unimpaired"
+NeoBundle "tpope/vim-vinegar"
 NeoBundle "vim-ruby/vim-ruby"
 
 NeoBundleCheck
