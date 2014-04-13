@@ -65,6 +65,13 @@ git_trusted__update
 preexec_functions+=("git_trusted__update" "skirt_osx_path_helper__update")
 
 
+# Since ~ is a git repo, this makes git not consider itself in that repo when
+# we're in subdirectories of ~, only when we're in ~ itself. Thus, we don't get
+# a git prompt everywhere, and we don't accidentally commit things to the
+# dotfiles repo thinking that we were in a closer repo.
+export GIT_CEILING_DIRECTORIES="$HOME"
+
+
 ### Aliases ###
 
 # Output total time to load zsh.
