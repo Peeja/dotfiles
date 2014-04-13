@@ -1,3 +1,4 @@
 .DS_Store
 .powenv
 tags
+Session.vim
