@@ -150,36 +150,6 @@
       <include path="speed_dial_app.xml">
         <replacementdef>
           <replacementname>KEY</replacementname>
-          <replacementvalue>K</replacementvalue>
-        </replacementdef>
-        <replacementdef>
-          <replacementname>APP_NAME</replacementname>
-          <replacementvalue>Google Chrome</replacementvalue>
-        </replacementdef>
-        <replacementdef>
-          <replacementname>APP_BUNDLE_ID</replacementname>
-          <replacementvalue>com.google.Chrome</replacementvalue>
-        </replacementdef>
-        <replacementdef>
-          <replacementname>APP_PATH</replacementname>
-          <replacementvalue>/Applications</replacementvalue>
-        </replacementdef>
-
-        <!--
-          Sometimes, when Chrome is hidden and then activated with Speed
-          Dial, it restores one of its minimized windows. It appears to be a
-          bug in Chrome. To avoid that, we disable the hiding part of Speed
-          Dial for Chrome, so we never hide it.
-        -->
-        <replacementdef>
-          <replacementname>HIDE_KEY</replacementname>
-          <replacementvalue>KeyCode::VK_NONE</replacementvalue>
-        </replacementdef>
-      </include>
-
-      <include path="speed_dial_app.xml">
-        <replacementdef>
-          <replacementname>KEY</replacementname>
           <replacementvalue>SEMICOLON</replacementvalue>
         </replacementdef>
         <replacementdef>
@@ -196,6 +166,31 @@
         </replacementdef>
       </include>
 
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>B</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Calendar</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.apple.iCal</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <!-- Activate Google Chrome, using various profiles, via Alfred. -->
+      <!-- Requires the custom Activate Chrome Profile workflow, which I'm not sure how best to distribute. -->
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::F12, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::F1, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::F2, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::F3, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
 
       <include path="null_mapping.xml"/>
     </item>
