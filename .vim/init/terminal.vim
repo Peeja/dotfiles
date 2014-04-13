@@ -6,12 +6,16 @@ if !has("gui_running")
     set <F15>=[28~
     set <F16>=[29~
     set <F17>=[31~
+    set <F18>=[32~
+    set <F19>=[33~
   elseif &term =~ "^xterm"
     set <F13>=[1;2P
     set <F14>=[1;2Q
     set <F15>=[1;2R
     set <F16>=[1;2S
     set <F17>=[15;2~
+    set <F18>=[17;2~
+    set <F19>=[18;2~
   endif
 
   " Map Cmd-S to <F12> in iTerm2 for Save.

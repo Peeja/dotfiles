@@ -1,24 +1,81 @@
 <?xml version="1.0"?>
 <root>
   <item>
-    <name>Universal Pane Switcher</name>
+    <name>Delta Force</name>
     <item>
-      <name>Hold D and F, then press HJKL to switch Vim/Tmux panes.</name>
-      <appendix>(This actually maps those keystrokes to F13-F16. Pane switching</appendix>
-      <appendix>depends on Vim, Tmux and iTerm playing along.)</appendix>
-      <identifier vk_config="true">notsave.private.paneswitcher</identifier>
-      <only>iTerm</only>
-      <autogen>__ShowStatusMessage__ Pane Switcher</autogen>
-      <autogen>__KeyToKey__ KeyCode::H, KeyCode::F13</autogen>
-      <autogen>__KeyToKey__ KeyCode::J, KeyCode::F14</autogen>
-      <autogen>__KeyToKey__ KeyCode::K, KeyCode::F15</autogen>
-      <autogen>__KeyToKey__ KeyCode::L, KeyCode::F16</autogen>
-      <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F17</autogen>
+      <name>Hold D and F, then press:</name>
+
+      <appendix></appendix>
+      <appendix>In iTerm:</appendix>
+      <appendix>* H/J/K/L/; to switch to Vim/Tmux pane left/down/up/right/most recent</appendix>
+      <appendix>* I/O to switch to prev/next Vim tab</appendix>
+      <appendix>* M/,/' to switch to prev/next/most recent Tmux window</appendix>
+      <appendix>(These keystrokes actually map to F13-F19, and depend on Vim, Tmux and iTerm</appendix>
+      <appendix>playing along. iTerm's default keymappings do their part out of the box.)</appendix>
+      <appendix></appendix>
+
+      <appendix>In Chrome:</appendix>
+      <appendix>* I/O to switch to prev/next tab</appendix>
+      <appendix>* M/, to switch to prev/next window</appendix>
+      <appendix></appendix>
+
+      <appendix>In OmniFocus:</appendix>
+      <appendix>* H/L to switch between the sidebar and the main pane</appendix>
+      <identifier vk_config="true">notsave.private.deltaforce</identifier>
+      <autogen>__ShowStatusMessage__ Delta Force</autogen>
+
+      <group>
+        <only>iTerm</only>
+        <autogen>__KeyToKey__ KeyCode::H, KeyCode::F13</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::F14</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F15</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::F16</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F17</autogen>
+
+        <!-- Prev/Next Vim tab -->
+        <autogen>__KeyToKey__ KeyCode::I, KeyCode::F18</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::F19</autogen>
+
+        <!-- Prev/Next/Last Tmux window -->
+        <!-- Switching to shifted F-keys here because KeyRemap4MacBook doesn't
+             recognize anything above F19. But shifted F-keys are hard to get
+             through Tmux to Vim. We can use them for these mappings because they
+             don't have to get through to Vim, just to Tmux. -->
+        <autogen>__KeyToKey__ KeyCode::M, KeyCode::F8, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::F9, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::F10, ModifierFlag::SHIFT_L</autogen>
+      </group>
+
+      <appdef>
+        <appname>Google Chrome</appname>
+        <equal>com.google.Chrome</equal>
+      </appdef>
+
+      <group>
+        <only>Google Chrome</only>
+        <autogen>__KeyToKey__ KeyCode::I, KeyCode::BRACKET_LEFT,  ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+
+        <autogen>__KeyToKey__ KeyCode::M,     KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+      </group>
+
+      <group>
+        <only>OmniFocus</only>
+        <!-- There are only two "panes" in OmniFocus——the sidebar and the main
+             pane——and there's only one way to switch between them. -->
+        <autogen>__KeyToKey__ KeyCode::H,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+      </group>
+
+      <include path="null_mapping.xml"/>
     </item>
+
     <item>
-      <name>Holding [D+F] turns on "Pane Switcher" mode</name>
-      <identifier>remap.paneswitcher_sd</identifier>
-      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_paneswitcher</autogen>
+      <name>Holding [D+F] turns on "Delta Force" mode</name>
+      <identifier>remap.deltaforce_df</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_deltaforce</autogen>
     </item>
   </item>
 
@@ -139,6 +196,8 @@
         </replacementdef>
       </include>
 
+
+      <include path="null_mapping.xml"/>
     </item>
     <item>
       <name>Holding [D+F] turns on "Speed Dial" mode</name>

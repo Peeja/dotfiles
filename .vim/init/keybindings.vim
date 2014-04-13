@@ -68,5 +68,17 @@ nnoremap <silent> <F15> :TmuxNavigateUp<CR>
 nnoremap <silent> <F16> :TmuxNavigateRight<CR>
 nnoremap <silent> <F17> :TmuxNavigatePrevious<CR>
 
+nnoremap <silent> <F18> :tabprevious<CR>
+nnoremap <silent> <F19> :tabnext<CR>
+
+" Don't type these in insert mode.
+inoremap <silent> <F13> <Nop>
+inoremap <silent> <F14> <Nop>
+inoremap <silent> <F15> <Nop>
+inoremap <silent> <F16> <Nop>
+inoremap <silent> <F17> <Nop>
+inoremap <silent> <F18> <Nop>
+inoremap <silent> <F19> <Nop>
+
 " vinegar.vim: Use split when directory browsing.
 nmap - <Plug>VinegarSplitUp
