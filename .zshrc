@@ -149,7 +149,7 @@ stty -ixon
 # Ctrl-Zsh
 
 # ^Z to foreground the last suspended job.
-foreground-current-job() { fg; zle reset-prompt; }
+foreground-current-job() { fg 2>/dev/null && jobs-info && zle reset-prompt; }
 zle -N foreground-current-job
 bindkey -M emacs '^z' foreground-current-job
 
