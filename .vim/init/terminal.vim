@@ -18,9 +18,6 @@ if !has("gui_running")
   map <F12> :w\|wall<CR>
   map! <F12> <C-o>:w\|wall<CR>
 
-  " Makes Command-T work again with arrow keys.  Not clear why.
-  nmap <Esc>[A <Up>
-
   " Add a blank line when switching back from the altscreen.  Without this, we
   " often have the following situation:
   "
