@@ -78,6 +78,41 @@
         <autogen>__KeyToKey__ KeyCode::H,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::L,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+
+        <vkopenurldef>
+          <name>KeyCode::VK_OPEN_URL_SHELL_omnifocus_next_leaf</name>
+          <url type="shell">
+            <![CDATA[
+              /usr/bin/osascript <<-APPLESCRIPT
+                tell application "OmniFocus"
+                  tell sidebar of first document window of first document
+                    set selected_id to id of last selected tree
+                    select leaf after leaf id selected_id
+                  end tell
+                end tell
+              APPLESCRIPT
+            ]]>
+          </url>
+        </vkopenurldef>
+
+        <vkopenurldef>
+          <name>KeyCode::VK_OPEN_URL_SHELL_omnifocus_previous_leaf</name>
+          <url type="shell">
+            <![CDATA[
+              /usr/bin/osascript <<-APPLESCRIPT
+                tell application "OmniFocus"
+                  tell sidebar of first document window of first document
+                    set selected_id to id of last selected tree
+                    select leaf before leaf id selected_id
+                  end tell
+                end tell
+              APPLESCRIPT
+            ]]>
+          </url>
+        </vkopenurldef>
+
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_OPEN_URL_SHELL_omnifocus_next_leaf</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_OPEN_URL_SHELL_omnifocus_previous_leaf</autogen>
       </group>
 
       <include path="null_mapping.xml"/>
@@ -206,7 +241,7 @@
       <include path="null_mapping.xml"/>
     </item>
     <item>
-      <name>Holding [D+F] turns on "Speed Dial" mode</name>
+      <name>Holding [S+D] turns on "Speed Dial" mode</name>
       <identifier>remap.speeddial_sd</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_speeddial</autogen>
     </item>
