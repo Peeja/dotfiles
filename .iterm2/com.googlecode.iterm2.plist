@@ -442,11 +442,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>881 -21 445 270 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>450 712 924 485 0 0 2560 1418 </string>
+	<string>534 647 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 892 730 526 0 0 2560 1418 </string>
+	<string>0 81 1280 1337 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 889 730 526 0 0 2560 1418 </string>
+	<string>0 881 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1391 219 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1096,6 +1096,8 @@
 			<string></string>
 			<key>AWDS Window Option</key>
 			<string>No</string>
+			<key>Allow Title Reporting</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -1255,6 +1257,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Background Image Is Tiled</key>
+			<false/>
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Blend</key>
@@ -1686,6 +1690,10 @@
 			<true/>
 			<key>Use Bright Bold</key>
 			<true/>
+			<key>Use Canonical Parser</key>
+			<false/>
+			<key>Use Italic Font</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -1762,7 +1770,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-03-07T23:00:26Z</date>
+	<date>2014-04-19T17:19:55Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
