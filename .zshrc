@@ -207,4 +207,8 @@ zstyle ':prezto:module:jobs:info:count:*:*' format " ✪"
 RPROMPT="%F{green}\$jobs_info[running]%f%F{blue}\$jobs_info[suspended]%f$RPROMPT"
 
 
+# Highlight long Git messages.
+ZSH_HIGHLIGHT_PATTERNS+=('git c(|ommit) (|* )(-m(| )|--message(=| ))"(?~")(#c51,)(|"*)' 'fg=white,bold,bg=red')
+
+
 [ -n "$PROFILE_INIT" ] && zprof
