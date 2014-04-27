@@ -121,6 +121,14 @@
         <autogen>__KeyToKey__ KeyCode::K, KeyCode::BRACKET_LEFT,  ModifierFlag::COMMAND_L</autogen>
       </group>
 
+      <group>
+        <only>Tweetbot</only>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::BRACKET_LEFT,  ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, KeyCode::TAB, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::TAB</autogen>
+      </group>
+
       <include path="null_mapping.xml"/>
     </item>
 
@@ -171,6 +179,25 @@
         <replacementdef>
           <replacementname>APP_BUNDLE_ID</replacementname>
           <replacementvalue>com.fluidapp.FluidApp.Pandora</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>H</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Tweetbot</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.tapbots.TweetbotMac</replacementvalue>
         </replacementdef>
         <replacementdef>
           <replacementname>APP_PATH</replacementname>
