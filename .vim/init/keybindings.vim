@@ -27,6 +27,12 @@ nmap <leader>e  :e #<CR>
 map <F1>        <Nop>
 imap <F1>       <Nop>
 
+" Common scenario: Press <S-V> to enter visual mode, then <K> to go up, but fail
+" to release Shift before hitting <K>, which runs 'keywordprg' with the visual
+" selection. Since I never use K from visual mode (and rarely use it at all),
+" this mapping saves some hassle.
+vmap K          k
+
 " Recalculate diff when it gets messed up.
 nmap du         :diffupdate<CR>
 
