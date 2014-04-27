@@ -108,6 +108,18 @@ alias zeus="nocorrect zeus"
 
 ## Functions
 
+# Start Vim with session, if present (and if no arguments given).
+# https://github.com/tpope/vim-obsession/issues/11
+function vim() {
+  if test $# -gt 0; then
+    env vim "$@"
+  elif test -f Session.vim; then
+    env vim -S
+  else
+    env vim
+  fi
+}
+
 # Show times to run preexec functions and render prompt.
 function prompttime {
   TIMEFMT="%E"
