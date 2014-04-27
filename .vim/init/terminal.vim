@@ -18,10 +18,6 @@ if !has("gui_running")
     set <F19>=[18;2~
   endif
 
-  " Map Cmd-S to <F12> in iTerm2 for Save.
-  map <F12> :w\|wall<CR>
-  map! <F12> <C-o>:w\|wall<CR>
-
   " Add a blank line when switching back from the altscreen.  Without this, we
   " often have the following situation:
   "

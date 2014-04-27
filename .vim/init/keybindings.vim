@@ -4,6 +4,9 @@
 let mapleader = ","
 let maplocalleader = ";"
 
+" Easy writing.
+nnoremap <Leader>w :w\|wall<CR>
+
 " Make Y consistent with D and C
 map Y           y$
 
