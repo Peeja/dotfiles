@@ -16,7 +16,10 @@
 
       <appendix>In Chrome and Dash:</appendix>
       <appendix>* I/O to switch to prev/next tab</appendix>
-      <appendix>* M/, to switch to prev/next window (less useful in Dash)</appendix>
+      <appendix></appendix>
+
+      <appendix>In everything but iTerm:</appendix>
+      <appendix>* M/, to switch to prev/next window</appendix>
       <appendix></appendix>
 
       <appendix>In OmniFocus:</appendix>
@@ -60,7 +63,10 @@
         <only>Google Chrome, Dash</only>
         <autogen>__KeyToKey__ KeyCode::I, KeyCode::BRACKET_LEFT,  ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+      </group>
 
+      <group>
+        <not>iTerm</not>
         <autogen>__KeyToKey__ KeyCode::M,     KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
       </group>
