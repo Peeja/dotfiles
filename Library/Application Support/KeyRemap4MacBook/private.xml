@@ -29,21 +29,17 @@
 
       <group>
         <only>iTerm</only>
-        <autogen>__KeyToKey__ KeyCode::H, KeyCode::F13</autogen>
-        <autogen>__KeyToKey__ KeyCode::J, KeyCode::F14</autogen>
-        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F15</autogen>
-        <autogen>__KeyToKey__ KeyCode::L, KeyCode::F16</autogen>
-        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F17</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, KeyCode::F1, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::F2, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F3, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::F4, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F5, ModifierFlag::SHIFT_L</autogen>
 
         <!-- Prev/Next Vim tab -->
-        <autogen>__KeyToKey__ KeyCode::I, KeyCode::F18</autogen>
-        <autogen>__KeyToKey__ KeyCode::O, KeyCode::F19</autogen>
+        <autogen>__KeyToKey__ KeyCode::I, KeyCode::F6, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::F7, ModifierFlag::SHIFT_L</autogen>
 
         <!-- Prev/Next/Last Tmux window -->
-        <!-- Switching to shifted F-keys here because KeyRemap4MacBook doesn't
-             recognize anything above F19. But shifted F-keys are hard to get
-             through Tmux to Vim. We can use them for these mappings because they
-             don't have to get through to Vim, just to Tmux. -->
         <autogen>__KeyToKey__ KeyCode::M, KeyCode::F8, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::F9, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::F10, ModifierFlag::SHIFT_L</autogen>
