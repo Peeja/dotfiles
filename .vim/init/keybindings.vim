@@ -23,17 +23,6 @@ nnoremap <C-y>  3<C-y>
 " Switch to alternate file
 nmap <leader>e  :e #<CR>
 
-" Make command-line mode shell-like:
-"   C-A: To beginning of line
-"   M-b: Back a word
-"   M-f: Forward a word
-cnoremap <C-A>  <C-B>
-cnoremap <Esc>b <S-Left>
-cnoremap <Esc>f <S-Right>
-
-" But the default behavior of <C-A> is useful sometimes, so swap it into <C-B>
-cnoremap <C-B>  <C-A>
-
 " Disable F1
 map <F1>        <Nop>
 imap <F1>       <Nop>
