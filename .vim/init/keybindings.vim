@@ -41,10 +41,6 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 nmap <leader>/  gcc
 vmap <leader>/  gc
 
-" Directory browsing
-nmap \          :e .<CR>
-nmap \|         :e %:h<CR>
-
 " Close quickfix window
 nmap <leader>q  :cclose<CR>
 
@@ -72,5 +68,8 @@ inoremap <silent> <F17> <Nop>
 inoremap <silent> <F18> <Nop>
 inoremap <silent> <F19> <Nop>
 
-" vinegar.vim: Use split when directory browsing.
-nmap - <Plug>VinegarSplitUp
+" vinegar.vim: split-edit directory containing current file.
+nmap _ <Plug>VinegarSplitUp
+
+" Edit working directory
+nmap <C-_> :e .<CR>
