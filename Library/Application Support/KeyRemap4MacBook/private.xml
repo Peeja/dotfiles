@@ -313,4 +313,36 @@
       <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_errowkeys</autogen>
     </item>
   </item>
+
+  <item>
+    <name>Change View</name>
+    <item>
+      <name>Hold C and V, then use HJKL to move windows with SizeUp.</name>
+      <identifier vk_config="true">notsave.private.changeview</identifier>
+      <autogen>__ShowStatusMessage__ ERrow Keys</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT,  ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN,  ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP,    ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::Y, KeyCode::CURSOR_LEFT,  ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::U, KeyCode::CURSOR_UP,    ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_DOWN,  ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::N, KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::M, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::QUOTE,     KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_LEFT,  ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::O, KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L</autogen>
+
+      <include path="null_mapping.xml"/>
+    </item>
+    <item>
+      <name>Holding [C+V] turns on "Change View" mode</name>
+      <identifier>remap.changeview_cv</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::C, KeyCode::V, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_changeview</autogen>
+    </item>
+  </item>
 </root>
