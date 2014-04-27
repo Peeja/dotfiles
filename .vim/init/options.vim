@@ -53,6 +53,7 @@ set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 
 set viminfo+=!                  " Save UPPERCASE globals in viminfo (useful for classpath.vim).
+set sessionoptions-=buffers     " Don't keep hidden buffers in session, just buffers that have windows.
 
 set hls                         " search with highlights by default
 
