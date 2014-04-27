@@ -95,7 +95,7 @@
     <item>
       <name>Hold S and D, then press another key to switch to the application assigned to it.</name>
       <appendix>Some applications will hide when their key is pressed if they're</appendix>
-      <appendix>already frontmost. This varies accordiong to how useful it is.</appendix>
+      <appendix>already frontmost. This varies according to how useful it is.</appendix>
       <appendix>See comments in private.xml, where the mappings are defined.</appendix>
       <identifier vk_config="true">notsave.private.speeddial</identifier>
       <autogen>__ShowStatusMessage__ Speed Dial</autogen>
