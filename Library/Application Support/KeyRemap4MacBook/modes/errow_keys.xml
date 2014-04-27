@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>ERrow Keys</name>
+    <item>
+      <name>Hold E and R, then use HJKL as arrow keys.</name>
+      <identifier vk_config="true">notsave.private.errowkeys</identifier>
+      <autogen>__ShowStatusMessage__ ERrow Keys</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+
+      <include path="includes/null_mapping.xml"/>
+    </item>
+    <item>
+      <name>Holding [E+R] turns on "ERrow Keys" mode</name>
+      <identifier>remap.errowkeys_er</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::R, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_errowkeys</autogen>
+    </item>
+  </item>
+</root>

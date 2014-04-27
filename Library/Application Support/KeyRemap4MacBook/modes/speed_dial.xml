@@ -1,0 +1,159 @@
+<root>
+  <item>
+    <name>Speed Dial</name>
+    <item>
+      <name>Hold S and D, then press another key to switch to the application assigned to it.</name>
+      <appendix>Some applications will hide when their key is pressed if they're</appendix>
+      <appendix>already frontmost. This varies according to how useful it is.</appendix>
+      <appendix>See comments in private.xml, where the mappings are defined.</appendix>
+      <identifier vk_config="true">notsave.private.speeddial</identifier>
+      <autogen>__ShowStatusMessage__ Speed Dial</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::N, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>O</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>OmniFocus</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.omnigroup.OmniFocus</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>P</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Pandora</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.fluidapp.FluidApp.Pandora</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>H</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Tweetbot</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.tapbots.TweetbotMac</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>J</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>iTerm</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.googlecode.iterm2</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>HIDE_KEY</replacementname>
+          <replacementvalue>KeyCode::VK_NONE</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>SEMICOLON</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Flint</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.giantcomet.flint</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>QUOTE</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Textual</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.codeux.irc.textual</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>B</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Calendar</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.apple.iCal</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <!-- Activate Google Chrome, using various profiles, via Alfred. -->
+      <!-- Requires the custom Activate Chrome Profile workflow, which I'm not sure how best to distribute. -->
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::F12, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::F1, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::F2, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::F3, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+
+      <include path="includes/null_mapping.xml"/>
+    </item>
+    <item>
+      <name>Holding [S+D] turns on "Speed Dial" mode</name>
+      <identifier>remap.speeddial_sd</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::S, KeyCode::D, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_speeddial</autogen>
+    </item>
+  </item>
+</root>

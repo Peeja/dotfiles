@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Delta Force</name>
+    <item>
+      <name>Hold D and F, then press:</name>
+
+      <appendix></appendix>
+      <appendix>In iTerm:</appendix>
+      <appendix>* H/J/K/L/; to switch to Vim/Tmux pane left/down/up/right/most recent</appendix>
+      <appendix>* I/O to switch to prev/next Vim tab</appendix>
+      <appendix>* M/,/' to switch to prev/next/most recent Tmux window</appendix>
+      <appendix>(These keystrokes actually map to F13-F19, and depend on Vim, Tmux and iTerm</appendix>
+      <appendix>playing along. iTerm's default keymappings do their part out of the box.)</appendix>
+      <appendix></appendix>
+
+      <appendix>In Chrome and Dash:</appendix>
+      <appendix>* I/O to switch to prev/next tab</appendix>
+      <appendix></appendix>
+
+      <appendix>In everything but iTerm:</appendix>
+      <appendix>* M/, to switch to prev/next window</appendix>
+      <appendix></appendix>
+
+      <appendix>In OmniFocus:</appendix>
+      <appendix>* H/L to switch between the sidebar and the main pane</appendix>
+      <identifier vk_config="true">notsave.private.deltaforce</identifier>
+      <autogen>__ShowStatusMessage__ Delta Force</autogen>
+
+      <group>
+        <only>iTerm</only>
+        <autogen>__KeyToKey__ KeyCode::H, KeyCode::F1, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::F2, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::F3, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::F4, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::F5, ModifierFlag::SHIFT_L</autogen>
+
+        <!-- Prev/Next Vim tab -->
+        <autogen>__KeyToKey__ KeyCode::I, KeyCode::F6, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::F7, ModifierFlag::SHIFT_L</autogen>
+
+        <!-- Prev/Next/Last Tmux window -->
+        <autogen>__KeyToKey__ KeyCode::M, KeyCode::F8, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::F9, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::F10, ModifierFlag::SHIFT_L</autogen>
+      </group>
+
+      <appdef>
+        <appname>Google Chrome</appname>
+        <equal>com.google.Chrome</equal>
+      </appdef>
+
+      <appdef>
+        <appname>Dash</appname>
+        <equal>com.kapeli.dash</equal>
+      </appdef>
+
+      <group>
+        <only>Google Chrome, Dash</only>
+        <autogen>__KeyToKey__ KeyCode::I, KeyCode::BRACKET_LEFT,  ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L</autogen>
+      </group>
+
+      <group>
+        <not>iTerm</not>
+        <autogen>__KeyToKey__ KeyCode::M,     KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+      </group>
+
+      <group>
+        <only>OmniFocus</only>
+        <!-- There are only two "panes" in OmniFocus——the sidebar and the main
+             pane——and there's only one way to switch between them. -->
+        <autogen>__KeyToKey__ KeyCode::H,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
+
+        <vkopenurldef>
+          <name>KeyCode::VK_OPEN_URL_SHELL_omnifocus_next_leaf</name>
+          <url type="shell">
+            <![CDATA[
+              /usr/bin/osascript <<-APPLESCRIPT
+                tell application "OmniFocus"
+                  tell sidebar of first document window of first document
+                    set selected_id to id of last selected tree
+                    select leaf after leaf id selected_id
+                  end tell
+                end tell
+              APPLESCRIPT
+            ]]>
+          </url>
+        </vkopenurldef>
+
+        <vkopenurldef>
+          <name>KeyCode::VK_OPEN_URL_SHELL_omnifocus_previous_leaf</name>
+          <url type="shell">
+            <![CDATA[
+              /usr/bin/osascript <<-APPLESCRIPT
+                tell application "OmniFocus"
+                  tell sidebar of first document window of first document
+                    set selected_id to id of last selected tree
+                    select leaf before leaf id selected_id
+                  end tell
+                end tell
+              APPLESCRIPT
+            ]]>
+          </url>
+        </vkopenurldef>
+
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_OPEN_URL_SHELL_omnifocus_next_leaf</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_OPEN_URL_SHELL_omnifocus_previous_leaf</autogen>
+      </group>
+
+      <group>
+        <only>Textual</only>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::BRACKET_LEFT,  ModifierFlag::COMMAND_L</autogen>
+      </group>
+
+      <group>
+        <only>Tweetbot</only>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::BRACKET_LEFT,  ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, KeyCode::TAB, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::TAB</autogen>
+      </group>
+
+      <include path="includes/null_mapping.xml"/>
+    </item>
+
+    <item>
+      <name>Holding [D+F] turns on "Delta Force" mode</name>
+      <identifier>remap.deltaforce_df</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_private_deltaforce</autogen>
+    </item>
+  </item>
+</root>

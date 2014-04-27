@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<root>
+  <group>
+    <!-- Disable any keys not explicitly mapped. -->
+    <autogen>__KeyToKey__ KeyCode::A, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::B, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::C, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::D, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::E, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::H, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::L, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::M, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::N, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::P, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::Q, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::R, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::S, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::T, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::U, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::V, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::W, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::X, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::Y, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::Z, KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_1, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_2, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_3, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_4, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_5, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_6, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_7, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_8, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_9, KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::BACKQUOTE,     KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::BACKSLASH,     KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMA,         KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::DOT,           KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::EQUAL,         KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::MINUS,         KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::QUOTE,         KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON,     KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::SLASH,         KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_0,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_1,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_2,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_3,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_4,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_5,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_6,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_7,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_8,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_9,        KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_CLEAR,    KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_COMMA,    KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_DOT,      KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_EQUAL,    KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_MINUS,    KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_MULTIPLY, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_PLUS,     KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEYPAD_SLASH,    KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::DELETE,          KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::ENTER,           KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::ENTER_POWERBOOK, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::ESCAPE,          KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::HELP,            KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::RETURN,          KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::SPACE,           KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::TAB,             KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::F1,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F2,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F3,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F4,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F5,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F6,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F7,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F8,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F9,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F10, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F11, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F12, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F13, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F14, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F15, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F16, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F17, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F18, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F19, KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::BRIGHTNESS_DOWN, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRIGHTNESS_UP,   KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::DASHBOARD,       KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::EXPOSE_ALL,      KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::LAUNCHPAD,       KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::MISSION_CONTROL, KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::CURSOR_UP,    KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::CURSOR_DOWN,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT,  KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::CURSOR_RIGHT, KeyCode::VK_NONE</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::PAGEUP,   KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::PAGEDOWN, KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::HOME,     KeyCode::VK_NONE</autogen>
+    <autogen>__KeyToKey__ KeyCode::END,      KeyCode::VK_NONE</autogen>
+  </group>
+</root>
