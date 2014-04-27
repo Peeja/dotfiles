@@ -115,6 +115,12 @@
         <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_OPEN_URL_SHELL_omnifocus_previous_leaf</autogen>
       </group>
 
+      <group>
+        <only>Textual</only>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::BRACKET_LEFT,  ModifierFlag::COMMAND_L</autogen>
+      </group>
+
       <include path="null_mapping.xml"/>
     </item>
 
@@ -138,8 +144,6 @@
       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::N, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
 
-      <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
-
       <include path="speed_dial_app.xml">
         <replacementdef>
           <replacementname>KEY</replacementname>
@@ -153,9 +157,9 @@
           <replacementname>APP_BUNDLE_ID</replacementname>
           <replacementvalue>com.omnigroup.OmniFocus</replacementvalue>
         </replacementdef>
-        </include>
+      </include>
 
-        <include path="speed_dial_app.xml">
+      <include path="speed_dial_app.xml">
         <replacementdef>
           <replacementname>KEY</replacementname>
           <replacementvalue>P</replacementvalue>
@@ -205,6 +209,25 @@
         <replacementdef>
           <replacementname>APP_BUNDLE_ID</replacementname>
           <replacementvalue>com.giantcomet.flint</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_PATH</replacementname>
+          <replacementvalue>/Applications</replacementvalue>
+        </replacementdef>
+      </include>
+
+      <include path="speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>QUOTE</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>Textual</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.codeux.irc.textual</replacementvalue>
         </replacementdef>
         <replacementdef>
           <replacementname>APP_PATH</replacementname>
