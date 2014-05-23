@@ -33,7 +33,7 @@ function! s:keyword_increment(word, offset, increment)
 endfunction
 
 " :help <SID>
-function s:SID()
+function! s:SID()
   return matchstr(expand('<sfile>'), '<SNR>\zs\d\+\ze_SID$')
 endfun
 
