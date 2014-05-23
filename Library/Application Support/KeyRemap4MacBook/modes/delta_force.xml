@@ -40,8 +40,8 @@
         <autogen>__KeyToKey__ KeyCode::O, KeyCode::F7, ModifierFlag::SHIFT_L</autogen>
 
         <!-- Prev/Next/Last Tmux window -->
-        <autogen>__KeyToKey__ KeyCode::M, KeyCode::F8, ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::F9, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::F8, ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT,   KeyCode::F9, ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::F10, ModifierFlag::SHIFT_L</autogen>
       </group>
 
@@ -63,8 +63,8 @@
 
       <group>
         <not>iTerm</not>
-        <autogen>__KeyToKey__ KeyCode::M,     KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMA, KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::DOT,   KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L</autogen>
       </group>
 
       <group>
