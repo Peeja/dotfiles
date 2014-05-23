@@ -2,3 +2,7 @@ def log_to_console!
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   nil
 end
+
+IRB.conf[:PROMPT][:DYNAMIC][:LAMBDA] = ->(_) { "#{File.basename(Dir.pwd)}:#{Rails.env}" }
+
+# vim: ft=ruby
