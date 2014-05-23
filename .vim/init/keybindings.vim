@@ -21,7 +21,7 @@ nnoremap <C-e>  3<C-e>
 nnoremap <C-y>  3<C-y>
 
 " Switch to alternate file
-nmap <leader>e  :e #<CR>
+nnoremap <leader>e <C-^>
 
 " Disable F1
 map <F1>        <Nop>
