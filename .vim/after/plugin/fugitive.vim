@@ -11,3 +11,6 @@ autocmd FileType gitcommit set nolist
 
 " Gain GitHub superpowers.
 let g:fugitive_git_executable = 'gh'
+
+autocmd User Fugitive noremap <buffer> <Plug><Plug>Grep :Ggrep<Space>
+autocmd User Fugitive noremap <buffer> <Plug><Plug>Lgrep :Glgrep<Space>

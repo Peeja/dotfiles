@@ -79,3 +79,16 @@ nmap _ <Plug>VinegarSplitUp
 
 " Edit working directory
 nmap <C-_> :e .<CR>
+
+" Start an interactive console of some appropriate type. <Plug><Plug>Console
+" is mapped in various filetypes to be something useful.
+map <Leader>c <Plug><Plug>Console
+
+" Useful default console.
+noremap <Plug><Plug>Console :Start $SHELL<CR>
+
+map <Leader>g <Plug><Plug>Grep
+map <Leader>G <Plug><Plug>Lgrep
+
+noremap <Plug><Plug>Grep :grep<Space>
+noremap <Plug><Plug>Lgrep :lgrep<Space>

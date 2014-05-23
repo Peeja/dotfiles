@@ -1,3 +1,5 @@
+autocmd User Rails noremap <buffer> <Plug><Plug>Console :Start rails console<CR>
+
 let g:rails_gem_projections = {
       \ "active_model_serializers": {
       \   "app/serializers/*_serializer.rb": {
