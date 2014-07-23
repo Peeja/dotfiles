@@ -65,14 +65,14 @@ nnoremap <silent> <F17> :TmuxNavigatePrevious<CR>
 nnoremap <silent> <F18> :tabprevious<CR>
 nnoremap <silent> <F19> :tabnext<CR>
 
-" Don't type these in insert mode.
-inoremap <silent> <F13> <Nop>
-inoremap <silent> <F14> <Nop>
-inoremap <silent> <F15> <Nop>
-inoremap <silent> <F16> <Nop>
-inoremap <silent> <F17> <Nop>
-inoremap <silent> <F18> <Nop>
-inoremap <silent> <F19> <Nop>
+" Don't type these in insert-like modes.
+noremap! <F13> <Nop>
+noremap! <F14> <Nop>
+noremap! <F15> <Nop>
+noremap! <F16> <Nop>
+noremap! <F17> <Nop>
+noremap! <F18> <Nop>
+noremap! <F19> <Nop>
 
 " vinegar.vim: split-edit directory containing current file.
 nmap _ <Plug>VinegarSplitUp
