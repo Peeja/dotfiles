@@ -12,14 +12,18 @@
 /.cups/
 /.dropbox
 /.dropbox-master
+/.erlang.cookie
 /.fontconfig
 /.gem/
+/.god
+/.gradle
 /.guard_history
 /.heroku/
 /.inkscape-etc
 /.irb_history
 /.lein/repl-history
 /.lesshst
+/.local
 /.m2
 /.mysql_history
 /.netrc
@@ -31,12 +35,14 @@
 /.rediscli_history
 /.rnd
 /.rubies
+/.ruby_inline
 /.ssh
 /.subversion
 /.vagrant.d
 /.vim/.netrwhist
 /.vim/bundle
 /.viminfo
+/.zcompcache
 /.zcompdump
 /.zcompdump.zwc
 /.zhistory
@@ -48,6 +54,7 @@
 /Inbox
 /Movies
 /Music
+/Outbox
 /Pictures
 /Public
 /VirtualBox VMs
