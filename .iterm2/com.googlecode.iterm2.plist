@@ -442,9 +442,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>881 -21 445 270 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>534 647 924 485 0 0 2560 1418 </string>
+	<string>534 632 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 81 1280 1337 0 0 2560 1418 </string>
+	<string>0 0 2560 1440 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 881 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1714,6 +1714,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -1770,7 +1772,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-04-19T17:19:55Z</date>
+	<date>2014-07-09T14:46:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1829,6 +1831,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20140112</string>
+	<string>1.0.0.20140518</string>
 </dict>
 </plist>
