@@ -9,3 +9,5 @@ nmap <buffer> <Leader>gt :call RunAllSpecs()<CR>
 let b:surround_{char2nr("#")} = "#{\r}"
 
 abbreviate <buffer> bbg byebug
+abbreviate <buffer> bdp binding.pry
+abbreviate <buffer> saop save_and_open_page
