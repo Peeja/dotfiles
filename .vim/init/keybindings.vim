@@ -87,8 +87,14 @@ map <Leader>c <Plug><Plug>Console
 " Useful default console.
 noremap <Plug><Plug>Console :Start $SHELL<CR>
 
-map <Leader>g <Plug><Plug>Grep
-map <Leader>G <Plug><Plug>Lgrep
+" Quickfix and Location List greps.
+" Overridden where different greps are useful.
+map <Leader>G <Plug><Plug>Grep
+map <Leader>g <Plug><Plug>Lgrep
 
-noremap <Plug><Plug>Grep :grep<Space>
-noremap <Plug><Plug>Lgrep :lgrep<Space>
+" Grep for word under cursor.
+map <Leader><Leader>G <Plug><Plug>Grep<C-R><C-W><CR>
+map <Leader><Leader>g <Plug><Plug>Lgrep<C-R><C-W><CR>
+
+noremap <Plug><Plug>Grep :grep -w<Space>
+noremap <Plug><Plug>Lgrep :lgrep -w<Space>
