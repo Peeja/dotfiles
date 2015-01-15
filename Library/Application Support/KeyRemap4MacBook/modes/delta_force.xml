@@ -74,12 +74,6 @@
 
       <group>
         <only>OmniFocus</only>
-        <!-- There are only two "panes" in OmniFocus——the sidebar and the main
-             pane——and there's only one way to switch between them. -->
-        <autogen>__KeyToKey__ KeyCode::H,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::L,         KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::KEY_4, ModifierFlag::COMMAND_L</autogen>
-
         <vkopenurldef>
           <name>KeyCode::VK_OPEN_URL_SHELL_omnifocus_next_leaf</name>
           <url type="shell">
@@ -88,7 +82,7 @@
                 tell application "OmniFocus"
                   tell sidebar of first document window of first document
                     set selected_id to id of last selected tree
-                    select leaf after leaf id selected_id
+                    set selected trees to {leaf after leaf id selected_id}
                   end tell
                 end tell
               APPLESCRIPT
@@ -103,8 +97,8 @@
               /usr/bin/osascript <<-APPLESCRIPT
                 tell application "OmniFocus"
                   tell sidebar of first document window of first document
-                    set selected_id to id of last selected tree
-                    select leaf before leaf id selected_id
+                    set selected_id to id of first selected tree
+                    set selected trees to {leaf before leaf id selected_id}
                   end tell
                 end tell
               APPLESCRIPT
@@ -114,6 +108,10 @@
 
         <autogen>__KeyToKey__ KeyCode::J, KeyCode::VK_OPEN_URL_SHELL_omnifocus_next_leaf</autogen>
         <autogen>__KeyToKey__ KeyCode::K, KeyCode::VK_OPEN_URL_SHELL_omnifocus_previous_leaf</autogen>
+
+        <autogen>__KeyToKey__ KeyCode::H,         KeyCode::KEY_1, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::L,         KeyCode::KEY_2, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::KEY_3, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
       </group>
 
       <group>
