@@ -4,6 +4,7 @@
     <name>ERrow Keys</name>
     <item>
       <name>Hold E and R, then use HJKL as arrow keys.</name>
+      <appendix>Tab acts as Option for easy navigation by word.</appendix>
       <identifier vk_config="true">notsave.private.errowkeys</identifier>
       <autogen>__ShowStatusMessage__ ERrow Keys</autogen>
 
@@ -11,6 +12,8 @@
       <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
       <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
       <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+
+      <autogen>__KeyToKey__ KeyCode::TAB, KeyCode::OPTION_L</autogen>
 
       <include path="includes/null_mapping.xml"/>
     </item>
