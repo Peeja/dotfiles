@@ -8,6 +8,9 @@
 [color]
   ui = auto
 
+
+# Credit for much of this goes to Tim Pope and Gary Bernhardt.
+
 [alias]
   st = status
   c = commit --verbose
