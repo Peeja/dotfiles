@@ -27,8 +27,14 @@ nnoremap <C-y>  3<C-y>
 nnoremap <leader>e <C-^>
 
 " Disable F1
-map <F1>        <Nop>
-imap <F1>       <Nop>
+map <F1> <Nop>
+imap <F1> <Nop>
+
+" Disable mouse scrolling
+map <ScrollWheelUp> <Nop>
+imap <ScrollWheelUp> <Nop>
+map <ScrollWheelDown> <Nop>
+imap <ScrollWheelDown> <Nop>
 
 " Common scenario: Press <S-V> to enter visual mode, then <K> to go up, but fail
 " to release Shift before hitting <K>, which runs 'keywordprg' with the visual
