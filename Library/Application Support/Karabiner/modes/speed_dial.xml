@@ -5,11 +5,13 @@
       <name>Hold S and D, then press another key to switch to the application assigned to it.</name>
       <appendix>Some applications will hide when their key is pressed if they're</appendix>
       <appendix>already frontmost. This varies according to how useful it is.</appendix>
-      <appendix>See comments in private.xml, where the mappings are defined.</appendix>
       <identifier vk_config="true">notsave.private.speeddial</identifier>
       <autogen>__ShowStatusMessage__ Speed Dial</autogen>
 
+      <!-- Dash -->
       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::NONE, KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
+
+      <!-- nvALT -->
       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::NONE, KeyCode::N, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
 
       <include path="includes/speed_dial_app.xml">
