@@ -444,9 +444,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>534 632 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1440 0 0 2560 1418 </string>
+	<string>0 81 1280 1337 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 881 730 526 0 0 2560 1418 </string>
+	<string>0 81 1280 1337 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1391 219 730 526 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1772,7 +1772,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-07-09T14:46:58Z</date>
+	<date>2014-10-23T12:56:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1819,7 +1819,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>Lucida Grande</string>
+	<string>.Lucida Grande UI</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -1831,6 +1831,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20140518</string>
+	<string>1.0.0.20140629</string>
 </dict>
 </plist>
