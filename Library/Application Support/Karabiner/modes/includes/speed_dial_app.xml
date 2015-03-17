@@ -14,7 +14,12 @@
 
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_SPEEDDIAL_{{ APP_NAME }}</name>
-    <url type="file">{{ APP_PATH }}/{{ APP_NAME }}.app</url>
+    <!-- Activate the application only if it's already running. -->
+    <url type="shell">
+      <![CDATA[
+        ps -xo command | grep "^$(/usr/local/bin/greadlink --canonicalize {{ APP_PATH }}/{{ APP_NAME }}.app)" && open {{ APP_PATH }}/{{ APP_NAME }}.app
+      ]]>
+    </url>
   </vkopenurldef>
 
   <appdef>
