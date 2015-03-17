@@ -10,6 +10,9 @@ nnoremap <Leader>w :w\|wall<CR>
 " Make Y consistent with D and C
 map Y           y$
 
+" Yank to system pasteboard.
+map <leader>y   "*y
+
 " Substitution
 nmap <leader>s  :%s/
 vmap <leader>s  :s/
