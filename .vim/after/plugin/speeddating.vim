@@ -20,7 +20,8 @@ let s:cycles = [
             \ ['On', 'Off'],
             \ ['yes', 'no'],
             \ ['YES', 'NO'],
-            \ ['Yes', 'No']]
+            \ ['Yes', 'No'],
+            \ ['to', 'not_to']]
 
 function! s:keyword_increment(word, offset, increment)
     for set in s:cycles
