@@ -4,4 +4,87 @@
   <include path="modes/delta_force.xml"/>
   <include path="modes/errow_keys.xml"/>
   <include path="modes/change_view.xml"/>
+
+  <devicevendordef>
+    <vendorname>WASD</vendorname>
+    <vendorid>0x04d9</vendorid>
+  </devicevendordef>
+
+  <deviceproductdef>
+    <productname>TENKEYLESS_KBD</productname>
+    <productid>0x0269</productid>
+  </deviceproductdef>
+
+  <appdef>
+    <appname>Steam</appname>
+    <equal>com.valvesoftware.steam</equal>
+  </appdef>
+
+
+  <item>
+    <name>Custom bindings for WASD Keyboard Menu/Fn key</name>
+    <identifier>remap.fixup_menu</identifier>
+
+    <device_only>DeviceVendor::WASD, DeviceProduct::TENKEYLESS_KBD</device_only>
+
+    <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::CONTROL_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_R, KeyCode::FN</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::HELP,           ModifierFlag::FN, KeyCode::BRIGHTNESS_UP</autogen>
+    <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, ModifierFlag::FN, KeyCode::BRIGHTNESS_DOWN</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::END,      ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_VOLUME_MUTE</autogen>
+    <autogen>__KeyToKey__ KeyCode::PAGEUP,   ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_VOLUME_UP</autogen>
+    <autogen>__KeyToKey__ KeyCode::PAGEDOWN, ModifierFlag::FN, KeyCode::VK_CONSUMERKEY_VOLUME_DOWN</autogen>
+  </item>
+
+  <item>
+    <name>Space to page in Steam</name>
+    <appendix>For some reason, Space and S-Space don't page down and up in Steam.</appendix>
+    <identifier>remap.space_to_page_in_steam</identifier>
+    <only>Steam</only>
+
+    <autogen>__KeyToKey__ KeyCode::SPACE, ModifierFlag::SHIFT_L, KeyCode::PAGEUP</autogen>
+    <autogen>__KeyToKey__ KeyCode::SPACE, ModifierFlag::SHIFT_R, KeyCode::PAGEUP</autogen>
+  </item>
+
+  <item>
+    <name>Tab is also Option</name>
+    <appendix>Tab, when held, will act as (L) Option. When pressed, acts as a normal Tab</appendix>
+    <identifier>private.tab_as_option</identifier>
+    <autogen>
+      __KeyOverlaidModifier__
+      KeyCode::TAB,
+      KeyCode::OPTION_L,
+      KeyCode::TAB
+    </autogen>
+  </item>
+
+  <item>
+    <name>Enhance Kensington Slimblade</name>
+    <appendix>MiddleClick+Trackball:</appendix>
+    <appendix>* Up: Mission Control</appendix>
+    <appendix>* Down: App Expose</appendix>
+    <appendix>* Left: Move right a space</appendix>
+    <appendix>* Right: Move left a space</appendix>
+    <appendix></appendix>
+    <identifier>remap.slimblade</identifier>
+
+    <autogen>
+      __KeyOverlaidModifier__
+      PointingButton::MIDDLE,
+      KeyCode::VK_MODIFIER_BUTTON3,
+      PointingButton::MIDDLE,
+    </autogen>
+
+    <autogen>
+      __PointingRelativeToKey__
+      ModifierFlag::BUTTON3,
+
+      PointingRelative::UP,    KeyCode::MISSION_CONTROL,
+      PointingRelative::DOWN,  KeyCode::MISSION_CONTROL, ModifierFlag::CONTROL_L,
+      PointingRelative::LEFT,  KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L,
+      PointingRelative::RIGHT, KeyCode::CURSOR_LEFT,  ModifierFlag::CONTROL_L,
+    </autogen>
+  </item>
 </root>
