@@ -90,6 +90,25 @@
         </replacementdef>
       </include>
 
+<!--       <include path="includes/speed_dial_app.xml"> -->
+<!--         <replacementdef> -->
+<!--           <replacementname>KEY</replacementname> -->
+<!--           <replacementvalue>SEMICOLON</replacementvalue> -->
+<!--         </replacementdef> -->
+<!--         <replacementdef> -->
+<!--           <replacementname>APP_NAME</replacementname> -->
+<!--           <replacementvalue>Flint</replacementvalue> -->
+<!--         </replacementdef> -->
+<!--         <replacementdef> -->
+<!--           <replacementname>APP_BUNDLE_ID</replacementname> -->
+<!--           <replacementvalue>com.giantcomet.flint</replacementvalue> -->
+<!--         </replacementdef> -->
+<!--         <replacementdef> -->
+<!--           <replacementname>APP_PATH</replacementname> -->
+<!--           <replacementvalue>/Applications</replacementvalue> -->
+<!--         </replacementdef> -->
+<!--       </include> -->
+
       <include path="includes/speed_dial_app.xml">
         <replacementdef>
           <replacementname>KEY</replacementname>
@@ -97,11 +116,11 @@
         </replacementdef>
         <replacementdef>
           <replacementname>APP_NAME</replacementname>
-          <replacementvalue>Flint</replacementvalue>
+          <replacementvalue>Slack</replacementvalue>
         </replacementdef>
         <replacementdef>
           <replacementname>APP_BUNDLE_ID</replacementname>
-          <replacementvalue>com.giantcomet.flint</replacementvalue>
+          <replacementvalue>com.tinyspeck.slackmacgap</replacementvalue>
         </replacementdef>
         <replacementdef>
           <replacementname>APP_PATH</replacementname>
