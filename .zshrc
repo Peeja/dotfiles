@@ -84,10 +84,10 @@ alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 alias git=hub
 compdef hub=git
 
-# Rails shortcuts
+# Ruby
+alias be="bundle exec"
 alias rc="rails console"
 alias rdb="rails dbconsole"
-alias rr="noglob rails rake"
 alias rs="rails server"
 
 # tmux helpers
