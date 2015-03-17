@@ -34,4 +34,21 @@ if !has("gui_running")
   " This at least moves the cursor off the prompt so the the user knows
   " better.
   let &t_te .= "\<C-M>\<C-J>"
+
+
+  " Show working directory in title.
+  " We use the PWD when Vim starts; we don't change the value when changing
+  " the PWD or switching to a window with a local PWD. The name of the
+  " original PWD is usually a more useful name for the terminal window.
+
+  if &term =~ "^screen"
+    set t_ts=k
+    set t_fs=\
+  endif
+
+  set title
+  let &titlestring = system('basename $PWD | tr -d "\n"').':v'
+
+  " Is this what we want here?
+  let &titleold = system('basename $PWD | tr -d "\n"')
 end
