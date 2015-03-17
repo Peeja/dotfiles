@@ -81,15 +81,8 @@ alias loadtime="time zsh -il -c exit >/dev/null"
 alias whyslow="PROFILE_INIT=true zsh -il -c exit | less"
 
 # Use hub as git.
-# Disabled temporarily: It makes the prompt slow.
-# https://github.com/sorin-ionescu/prezto/issues/507
-#
-# alias git=hub
-# compdef hub=git
-
-# Trying out gh, a hub clone written in Go, instead.
-alias git=gh
-compdef gh=git
+alias git=hub
+compdef hub=git
 
 # Rails shortcuts
 alias rc="rails console"

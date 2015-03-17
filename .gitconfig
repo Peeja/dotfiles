@@ -41,7 +41,7 @@
 
   ctags = !.git/hooks/ctags
 
-  pr = "!git push Peeja HEAD -u && gh pull-request"
+  pr = "!git push Peeja HEAD -u && hub pull-request"
   clean-branches = "!git branch --merged master | grep -v master | xargs git branch -d"
   unpair = "!git config --unset user.name && git config --unset user.email"
   n = "!source ~/.githelpers && new_git_branch_from_origin_master"

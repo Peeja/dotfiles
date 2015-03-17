@@ -10,7 +10,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd FileType gitcommit set nolist
 
 " Gain GitHub superpowers.
-let g:fugitive_git_executable = 'gh'
+let g:fugitive_git_executable = 'hub'
 
 autocmd User Fugitive noremap <buffer> <Plug><Plug>Grep :Ggrep<Space>-w<Space>
 autocmd User Fugitive noremap <buffer> <Plug><Plug>Lgrep :Glgrep<Space>-w<Space>
