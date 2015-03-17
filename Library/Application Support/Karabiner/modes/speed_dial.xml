@@ -166,6 +166,21 @@
         </replacementdef>
       </include>
 
+      <include path="includes/speed_dial_app.xml">
+        <replacementdef>
+          <replacementname>KEY</replacementname>
+          <replacementvalue>M</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_NAME</replacementname>
+          <replacementvalue>TextMate</replacementvalue>
+        </replacementdef>
+        <replacementdef>
+          <replacementname>APP_BUNDLE_ID</replacementname>
+          <replacementvalue>com.macromates.TextMate.preview</replacementvalue>
+        </replacementdef>
+      </include>
+
       <!-- Activate Google Chrome, using various profiles, via Alfred. -->
       <!-- Requires the custom Activate Chrome Profile workflow, which I'm not sure how best to distribute. -->
       <autogen>__KeyToKey__ KeyCode::K, KeyCode::F12, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L</autogen>
