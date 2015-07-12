@@ -71,4 +71,9 @@
 /Library/Application Support/*
 !/Library/Application Support/KeyRemap4MacBook
 
+# local.* LaunchAgents are personalized configuration; other LaunchAgents are installed by apps and packages.
+!/Library/LaunchAgents
+/Library/LaunchAgents/*
+!/Library/LaunchAgents/local.*
+
 !/.vim/bundle/neobundle.vim

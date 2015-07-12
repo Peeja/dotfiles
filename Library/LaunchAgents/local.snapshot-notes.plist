@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Debug</key>
+	<false/>
+	<key>EnableGlobbing</key>
+	<true/>
+	<key>Label</key>
+	<string>local.snapshot-notes</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>git</string>
+		<string>-C</string>
+		<string>~/Dropbox/Notes</string>
+		<string>snapshot</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StartCalendarInterval</key>
+	<array>
+		<dict>
+			<key>Minute</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+</dict>
+</plist>
+
+<!-- @@@@LingonWhatStart:git -C ~/Dropbox/Notes snapshot@@@@LingonWhatEnd -->
